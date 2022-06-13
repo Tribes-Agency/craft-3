@@ -1,8 +1,8 @@
 {
     "name": "craft-cms",
     "build": {
+        "context": "../",
         "dockerfile": "Dockerfile"
     },
-    
     "forwardPorts": [80]
 }
