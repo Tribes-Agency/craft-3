@@ -5,9 +5,9 @@ RUN apt update -y ; apt install -y git \
     zip \
     unzip \
     nginx \
-    # libzip-dev \
-    # libxml2-dev \
-    # zlib1g-dev libpng-dev \
+    libzip-dev \
+    libxml2-dev \
+    zlib1g-dev libpng-dev \
     vim
 
 #install composer
@@ -21,6 +21,6 @@ COPY composer.json composer.lock /var/www/html/
 COPY . /var/www/html/
 
 #execution script
-# RUN chmod +x shell.sh
+RUN chmod +x shell.sh
 
-# CMD ["./shell.sh"]
+CMD ["./shell.sh"]
