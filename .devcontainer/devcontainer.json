@@ -1,7 +1,6 @@
 {
     "name": "craft-cms",
     "build": {
-        "context": "..",
         "dockerfile": "Dockerfile"
     },
     
