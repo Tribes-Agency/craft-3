@@ -31,7 +31,12 @@ RUN docker-php-ext-install gd
 RUN docker-php-ext-install xml
 RUN docker-php-ext-install soap
 RUN docker-php-ext-install bcmath
+RUN apt-get -y update \
+&& apt-get install -y libicu-dev \ ### <-- Added space here
+&& docker-php-ext-configure intl \
+&& docker-php-ext-install intl
 
+#source code here man!
 COPY . /var/www/html/
 
 #execution script
