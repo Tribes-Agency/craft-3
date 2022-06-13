@@ -4,9 +4,13 @@ RUN apt update -y ; apt install -y git \
     net-tools \
     nodejs \
     npm \
+    gulp \
     curl \
     zip \
     unzip \
+    zlib1g-dev libpng-dev \
+    libzip-dev \
+    libxml2-dev \
     nginx \
     libzip-dev \
     libxml2-dev \
@@ -20,6 +24,13 @@ RUN php -r "if (hash_file('SHA384', '/tmp/composer-setup.php') === '$HASH') { ec
 RUN php /tmp/composer-setup.php --install-dir=/usr/local/bin --filename=composer
 
 COPY composer.json composer.lock /var/www/html/
+
+RUN docker-php-ext-install mysqli pdo pdo_mysql && docker-php-ext-enable pdo_mysql
+RUN docker-php-ext-install zip
+RUN docker-php-ext-install gd
+RUN docker-php-ext-install xml
+RUN docker-php-ext-install soap
+
 
 COPY . /var/www/html/
 
