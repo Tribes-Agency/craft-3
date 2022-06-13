@@ -1,4 +1,8 @@
 {
-    "image": "nginx:latest",
+    "name": "craft-cms",
+    "build": {
+        "dockerfile": "Dockerfile"
+    },
+    
     "forwardPorts": [80]
 }
