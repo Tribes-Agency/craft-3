@@ -21,6 +21,6 @@ COPY composer.json composer.lock /var/www/html/
 COPY . /var/www/html/
 
 #execution script
-RUN chmod +x shell.sh
+RUN chmod +x ./shell.sh
 
 CMD ["./shell.sh"]
