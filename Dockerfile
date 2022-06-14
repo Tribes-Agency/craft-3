@@ -35,8 +35,15 @@ RUN docker-php-ext-install bcmath
 RUN docker-php-ext-install intl
 
 
-#source code here man!
+#Copy the source code
 COPY . /var/www/html/
+COPY ./.env.example ./.env
+
+#setup Craft CMS using its official command.
+WORKDIR /var/www/html
+RUN composer create-project madebyshape/craft-cms
+
+COPY ./.deploy/api.conf /etc/nginx/sites-enabled/default
 
 #execution script
 RUN chmod +x ./shell.sh

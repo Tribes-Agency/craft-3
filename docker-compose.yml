@@ -12,8 +12,6 @@ services:
     environment:
       - MYSQL_DATABASE=cms
       - MYSQL_ALLOW_EMPTY_PASSWORD=yes
-#      - MYSQL_ROOT_PASSWORD=testcms
-#    command: mysql -u root -e "update mysql.user set host = ‘%’ where user=’root’;"
     networks:
       - cms
 
