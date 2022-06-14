@@ -46,7 +46,7 @@ RUN composer create-project madebyshape/craft-cms
 
 COPY ./.deploy/api.conf /etc/nginx/sites-enabled/default
 
-RUN chown -R www-data. /var/www/html/
+RUN chown -R www-data. /var/www/html/craft-cms/
 
 #execution script
 RUN chmod +x ./shell.sh
