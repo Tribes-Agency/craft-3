@@ -40,12 +40,14 @@ COPY . /var/www/html/
 COPY ./.env.example ./.env
 
 #setup Craft CMS using its official command.
+USER www-data
 WORKDIR /var/www/html
 RUN composer create-project madebyshape/craft-cms
 
 COPY ./.deploy/api.conf /etc/nginx/sites-enabled/default
 
 #execution script
+USER root
 RUN chmod +x ./shell.sh
 
 CMD ["./shell.sh"]
