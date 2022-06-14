@@ -1,4 +1,4 @@
-FROM php:8.0-fpm
+FROM php:8.1-fpm
 
 RUN apt update -y ; apt install -y git \
     net-tools \
@@ -45,8 +45,6 @@ COPY .env.example .env
 RUN composer create-project madebyshape/craft-cms
 
 COPY ./.deploy/api.conf /etc/nginx/sites-enabled/default
-
-RUN chown -R www-data. /workspace/craft-cms/
 
 #execution script
 RUN chmod +x ./shell.sh
