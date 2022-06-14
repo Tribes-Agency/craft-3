@@ -1,8 +1,7 @@
 {
     "name": "craft-cms",
-    "build": {
-        "context": "..",
-        "dockerfile": "../Dockerfile"
-    },
+    "dockerComposeFile": "../docker-compose.yml",
+    "service": "app",
+    // "postCreateCommand": "docker-compose up -d",
     "forwardPorts": [80]
 }
