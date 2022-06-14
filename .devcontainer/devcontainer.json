@@ -3,5 +3,7 @@
     "dockerComposeFile": "../docker-compose.yml",
     "service": "app",
     // "postCreateCommand": "docker-compose up -d",
+    "workspaceFolder": "/var/www/html",
+    "shutdownAction": "stopCompose",
     "forwardPorts": [80]
 }
