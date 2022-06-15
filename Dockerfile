@@ -34,9 +34,9 @@ RUN docker-php-ext-install intl
 
 
 #Copy the source code
-WORKDIR /workspace
+WORKDIR /workspaces
 
-COPY composer.json composer.lock /workspace/
+COPY composer.json composer.lock /workspaces/
 COPY . .
 COPY .env.example .env
 #setup Craft CMS using its official command.
