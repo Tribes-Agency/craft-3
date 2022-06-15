@@ -1,5 +1,7 @@
 FROM php:8.1-fpm
 
+WORKDIR /workspaces
+
 RUN apt update -y ; apt install -y git \
     net-tools \
     nodejs \
@@ -34,13 +36,12 @@ RUN docker-php-ext-install intl
 
 
 #Copy the source code
-WORKDIR /var/www/html/
-
 COPY composer.json composer.lock ./
 COPY . .
 COPY .env.example .env
+
 #setup Craft CMS using its official command.
-RUN composer create-project madebyshape/craft-cms
+#RUN composer create-project madebyshape/craft-cms
 
 COPY ./.deploy/api.conf /etc/nginx/sites-enabled/default
 
