@@ -1,6 +1,6 @@
 FROM php:8.1-fpm
 
-WORKDIR /workspace
+#WORKDIR /workspace
 
 #installs NPM and nodejs and Nginx
 RUN apt update -y ; apt install -y git \
