@@ -34,7 +34,7 @@ RUN docker-php-ext-install intl
 
 
 #Copy the source code
-#WORKDIR /workspaces
+WORKDIR /var/www/html/
 
 COPY composer.json composer.lock ./
 COPY . .
