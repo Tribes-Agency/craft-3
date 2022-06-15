@@ -36,7 +36,7 @@ RUN docker-php-ext-install intl
 
 
 #Copy the source code
-WORKDIR /workspace
+WORKDIR /workspaces
 
 COPY . .
 COPY .env.example .env
