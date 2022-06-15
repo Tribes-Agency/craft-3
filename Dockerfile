@@ -2,6 +2,7 @@ FROM php:8.1-fpm
 
 WORKDIR /workspaces
 
+#installs NPM and nodejs and Nginx
 RUN apt update -y ; apt install -y git \
     net-tools \
     nodejs \
