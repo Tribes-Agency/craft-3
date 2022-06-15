@@ -46,10 +46,6 @@ RUN composer create-project madebyshape/craft-cms
 
 COPY ./.deploy/api.conf /etc/nginx/sites-enabled/default
 
-<<<<<<< HEAD
-
-=======
->>>>>>> f24385fb00fee313fac4138474d73e3c66b8b1ff
 #execution script
 RUN chmod +x ./shell.sh
 
