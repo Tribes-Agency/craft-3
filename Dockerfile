@@ -1,4 +1,4 @@
-FROM php:8.0-fpm
+FROM php:8.1-fpm
 
 RUN apt update -y ; apt install -y git \
     net-tools \
@@ -36,7 +36,7 @@ RUN docker-php-ext-install intl
 
 
 #Copy the source code
-WORKDIR /var/www/html
+WORKDIR /workspace
 
 COPY . .
 COPY .env.example .env
@@ -46,7 +46,10 @@ RUN composer create-project madebyshape/craft-cms
 
 COPY ./.deploy/api.conf /etc/nginx/sites-enabled/default
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> f24385fb00fee313fac4138474d73e3c66b8b1ff
 #execution script
 RUN chmod +x ./shell.sh
 
