@@ -35,12 +35,10 @@ RUN docker-php-ext-install intl
 
 #Copy the source code
 WORKDIR /workspace
-USER www-data
 
 COPY composer.json composer.lock /workspace/
 COPY . .
 COPY .env.example .env
-
 #setup Craft CMS using its official command.
 RUN composer create-project madebyshape/craft-cms
 
