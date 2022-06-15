@@ -1,0 +1,37 @@
+version: '3.3'
+services:
+  database:
+    container_name: database
+    image: mysql:8.0
+    cap_add:
+      - SYS_NICE
+    restart: always
+    ports:
+     - 3306:3306
+    environment:
+      - MYSQL_DATABASE=cms
+      - MYSQL_ALLOW_EMPTY_PASSWORD=yes
+    networks:
+      - cms
+  # Update this to the name of the service you want to work with in your docker-compose.yml file
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: app
+    ports:
+      - 80:80
+    networks:
+      - cms
+
+    volumes:
+      # Update this to wherever you want VS Code to mount the folder of your project
+      - .:/workspace:cached
+
+    # Overrides default command so things don't shut down after the process ends.
+    command: /bin/sh -c "while sleep 1000; do :; done"
+ 
+networks:
+  cms:
+    name: cms
+    driver: bridge
