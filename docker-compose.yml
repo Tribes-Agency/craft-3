@@ -1,5 +1,4 @@
 version: '3.3'
-
 services:
   database:
     container_name: database
@@ -14,7 +13,7 @@ services:
       - MYSQL_ALLOW_EMPTY_PASSWORD=yes
     networks:
       - cms
-
+  # Update this to the name of the service you want to work with in your docker-compose.yml file
   app:
     build:
       context: .
@@ -24,7 +23,10 @@ services:
       - 80:80
     networks:
       - cms
-    
+
+    # Overrides default command so things don't shut down after the process ends.
+    command: /bin/sh -c "while sleep 1000; do :; done"
+ 
 networks:
   cms:
     name: cms
