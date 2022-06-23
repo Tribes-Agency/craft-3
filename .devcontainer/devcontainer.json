@@ -2,7 +2,7 @@
 	"name": "brave",
 	"customizations": {
 		"vscode": {
-			"extensions": ["microsoft.live-share"]
+			"extensions": ["MS-vsliveshare.vsliveshare"]
 		}
 	},
 	"dockerComposeFile": [
