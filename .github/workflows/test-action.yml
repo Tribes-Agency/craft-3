@@ -1,7 +1,29 @@
 name: test action craft 3
 on: [push]
 jobs:
-  check-code-status:
-    runs-on: ubuntu-latest
+#build phase
+  build:
+    runs-on: [self-hosted,craft-3]
     steps:
-      - run: echo whoami
+      - name: Runner identification
+        run: |
+          whoami
+          pwd
+          ls
+      - name: clone code 
+        uses: actions/checkout@v3
+#deployment phase
+  deploy:
+    runs-on: [self-hosted,craft-3]
+    needs: build
+    steps:
+      - name: docker info 
+        run: docker info
+  
+#test deployment
+  test:
+    runs-on: [self-hosted,craft-3]
+    needs: deploy
+    steps:
+      - name: test curl
+        run:  curl https://google.com -vvv
