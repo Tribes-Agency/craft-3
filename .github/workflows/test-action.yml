@@ -1,0 +1,7 @@
+name: test action craft 3
+on: [push]
+jobs:
+  check-code-status:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo whoami
