@@ -1,6 +1,6 @@
 columnSuffix: null
 contentColumnType: string
-fieldGroup: a6548a8e-edd2-4cbb-9200-db7de2726f75 # Common
+fieldGroup: a6548a8e-edd2-4cbb-9200-db7de2726f75
 handle: siteHeaderNavigation
 instructions: null
 name: 'Site - Header Navigation'
@@ -9,7 +9,7 @@ settings:
   columns:
     __assoc__:
       -
-        - 07997af2-2846-44ff-a240-009561640c19 # Links To
+        - 07997af2-2846-44ff-a240-009561640c19
         -
           __assoc__:
             -

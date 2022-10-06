@@ -28,7 +28,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: 90552b17-3ba7-452a-9dfd-0b13004b4659 # Page - Block Content
+            fieldUid: 90552b17-3ba7-452a-9dfd-0b13004b4659
             instructions: null
             label: null
             required: false
@@ -42,7 +42,7 @@ fieldLayouts:
       -
         elements:
           -
-            fieldUid: d6471ab8-0d49-45bf-af5d-f0d2a860e267 # Meta & Social Data
+            fieldUid: d6471ab8-0d49-45bf-af5d-f0d2a860e267
             instructions: null
             label: null
             required: false
@@ -56,7 +56,7 @@ fieldLayouts:
 handle: pageBlock
 hasTitleField: true
 name: 'Page - Block'
-section: a4cade2e-b351-4d0b-8087-3328bc132811 # Page
+section: a4cade2e-b351-4d0b-8087-3328bc132811
 sortOrder: 1
 titleFormat: null
 titleTranslationKeyFormat: null

@@ -1,11 +1,11 @@
-field: 00cbe002-253f-4fca-b75f-ffc4cd309519 # Site - Header Navigation
+field: 00cbe002-253f-4fca-b75f-ffc4cd309519
 fieldLayouts:
   67b08afb-73c7-4cee-91bf-ae120c11f5f3:
     tabs:
       -
         elements:
           -
-            fieldUid: 07997af2-2846-44ff-a240-009561640c19 # Links To
+            fieldUid: 07997af2-2846-44ff-a240-009561640c19
             instructions: null
             label: null
             required: false
@@ -17,7 +17,7 @@ fieldLayouts:
         name: Content
         uid: 994b8647-2e99-4753-805e-bb8ecf386dde
 fields:
-  07997af2-2846-44ff-a240-009561640c19: # Links To
+  07997af2-2846-44ff-a240-009561640c19:
     columnSuffix: null
     contentColumnType: string
     fieldGroup: null

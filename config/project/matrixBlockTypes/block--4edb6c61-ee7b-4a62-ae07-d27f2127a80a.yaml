@@ -1,11 +1,11 @@
-field: 90552b17-3ba7-452a-9dfd-0b13004b4659 # Page - Block Content
+field: 90552b17-3ba7-452a-9dfd-0b13004b4659
 fieldLayouts:
   af512a4a-3b2f-4137-b331-1deeb26fa3cd:
     tabs:
       -
         elements:
           -
-            fieldUid: f64c5171-437f-45f4-ac5b-1164673e94f9 # Heading
+            fieldUid: f64c5171-437f-45f4-ac5b-1164673e94f9
             instructions: null
             label: null
             required: false
@@ -15,7 +15,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: feb39789-b26f-45a4-99fb-d7e4cc376989 # Padding
+            fieldUid: feb39789-b26f-45a4-99fb-d7e4cc376989
             instructions: null
             label: null
             required: false
@@ -27,7 +27,7 @@ fieldLayouts:
         name: Content
         uid: bde7f3d4-80a0-4bf2-8e74-9786f724493c
 fields:
-  f64c5171-437f-45f4-ac5b-1164673e94f9: # Heading
+  f64c5171-437f-45f4-ac5b-1164673e94f9:
     columnSuffix: null
     contentColumnType: text
     fieldGroup: null
@@ -47,7 +47,7 @@ fields:
     translationKeyFormat: null
     translationMethod: none
     type: craft\fields\PlainText
-  feb39789-b26f-45a4-99fb-d7e4cc376989: # Padding
+  feb39789-b26f-45a4-99fb-d7e4cc376989:
     columnSuffix: null
     contentColumnType: text
     fieldGroup: null
