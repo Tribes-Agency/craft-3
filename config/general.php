@@ -10,6 +10,20 @@
 
 use craft\helpers\App;
 
+$isDev = App::env('ENVIRONMENT') === 'dev';
+$isProd = App::env('ENVIRONMENT') === 'production';
+
+// Recognize if we are running in a codespace and under which name
+// this is why we forward the CODESPACES ENV vars in our docker-compose file to the container
+$isCodespaces = App::env('CODESPACES');
+$codespaceName = App::env('CODESPACE_NAME');
+
+$localhostAlias = 'http://localhost:8080';
+
+if ($isCodespaces) {
+    $localhostAlias = 'https://' . $codespaceName . '-8080.githubpreview.dev';
+}
+
 return [
     '*' => [
       // Site / Environment
@@ -45,7 +59,8 @@ return [
       // Aliases
       'aliases' => [
          '@assetBaseUrl' => App::env('ASSETS_URL'),
-         '@assetBasePath' => App::env('ASSETS_PATH')
+         '@assetBasePath' => App::env('ASSETS_PATH'),
+         '@siteUrl' => $localhostAlias . '/',
       ]
     ],
     'dev' => [

@@ -1,4 +1,4 @@
-const env = process.env.NODE_ENV ?? 'dev';
+const env = process.env.NODE_ENV ? process.env.NODE_ENV : 'dev';
 
 const package = require("./package.json"),
       webpackConfig = require('./webpack.' + env);

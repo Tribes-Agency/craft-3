@@ -1,15 +1,21 @@
 {
-	"name": "brave",
-	"customizations": {
-		"vscode": {
-			"extensions": ["MS-vsliveshare.vsliveshare"]
-		}
-	},
-	"dockerComposeFile": [
-		"../docker-compose.yml"
+	"name": "Craft Codespace",
+	"dockerComposeFile": "../docker-compose.yml", // tell the codespace to use a docker-compose file
+	"service": "workspace", // defines the container to initialize as terminal
+	"runServices": [
+	  "mariadb" // start mariadb on start of the codespace
 	],
-	"service": "app",
-	//"workspaceFolder": "/workspace",
-	"forwardPorts": [80],
-	"postCreateCommand": "php-fpm -D"
+	"remoteUser": "codespace",
+	"extensions": [ // some useful vscode extensions
+		"GitHub.vscode-pull-request-github",
+		"ms-azuretools.vscode-docker",
+		"whatwedo.twig"
+	],
+	"workspaceFolder": "/workspace", // define the work folder
+	  "portsAttributes": {
+		  	"8080": { // define the port to be used
+			  	"label": "Craft"
+		}
+	}
 }
+  
