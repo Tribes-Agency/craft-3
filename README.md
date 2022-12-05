@@ -107,3 +107,13 @@ Blocks ideally should be selectable via a Matrix Field so CP users can pick and 
 
 **MadeByShape** - https://madebyshape.co.uk  
 **Jason Mayo** - https://github.com/bymayo / https://bymayo.co.uk
+
+
+## How to clone it without history
+
+```
+git clone --depth 1 https://github.com/Tribes-Agency/craft-3.git
+git commit --amend -m "Initiate repo from template"
+git remote set-url origin https://github.com/Tribes-Agency/<NAME>.git
+git push origin
+```
